@@ -1,7 +1,5 @@
 const { app, BrowserWindow } = require('electron')
 
-const champions = require('lol-champions')
-
 function createWindow () {
   const win = new BrowserWindow({
     width: 800,
@@ -27,8 +25,3 @@ app.on('activate', () => {
     createWindow()
   }
 })
-
-console.log(champions[151].name)
-
-
-
