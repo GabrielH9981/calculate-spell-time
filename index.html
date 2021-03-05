@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Calculate Spell Time</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+</head>
+<body style="background: white;">
+    <h1>Hello World!</h1>
+    <p>
+        <select id="selectElement"></select>
+    </p>
+</body>
+
+<script>
+    select = document.getElementById('selectElement');
+
+    for (var i = 0; i<=151; i++){
+        var opt = document.createElement('option');
+        opt.value = champions[i].name;
+        opt.innerHTML = champions[i].name;
+        select.appendChild(opt);
+    }
+</script>
+
+<script type="text/javascript" src="teste.json"></script>
+</html>
