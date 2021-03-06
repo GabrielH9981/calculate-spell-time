@@ -6,6 +6,7 @@ const champions = ['Aatrox', 'Ahri', 'Akali', 'Alistar', 'Amumu', 'Anivia', 'Ann
         var opt = document.createElement('option');
         opt.value = i+1;
         opt.innerHTML = champions[i];
+        opt.setAttribute('data-imagesrc','.//public/flash.png'); 
         select.appendChild(opt);
     }
 
@@ -14,18 +15,18 @@ var cron;
 
 function timerFlash(){
 
-    document.getElementById("btnFlash").disabled = true;
-    
+    document.getElementById("btnFlash").style.width = "0%";
+
     cron = setInterval(function(){
         if (seconds > 0){
             seconds--;
             document.getElementById("flashTime").innerHTML = seconds;
         }
         else {
+            document.getElementById("btnFlash").style.width = "10%";
             document.getElementById("flashTime").innerHTML = "ELE TEM FLASH";
             clearInterval(cron);
-            document.getElementById("btnFlash").disabled = false;
         }
     }, 1000);
-    seconds = 300;
+    seconds = 10;
 }
